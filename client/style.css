@@ -1,0 +1,385 @@
+.hidden {
+  display: none;
+}
+
+* {
+  margin: revert-layer;
+  padding: 0;
+
+}
+
+/* Navaigationn bar */
+nav {
+  list-style: none;
+  display: flex;
+
+}
+
+.card {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+header nav .btn {
+  height: 50px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: #d12b12;
+  color: #fff;
+  padding: 0 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header nav .btn:hover {
+  background-color: #0d0d0d;
+  /* Darker blue color on hover */
+  transform: translateY(2px);
+  /* Slight downward movement on hover for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  /* Increased shadow size on hover */
+}
+
+
+header nav .btn {
+  background-image: linear-gradient(to bottom, #040404, #053d21);
+  /* Gradient background */
+}
+
+header nav .btn {
+  list-style: none;
+}
+
+/* Navigatiion bar */
+
+
+
+/* HIIT Section */
+
+#hiit-container {
+  background-color: rgb(220, 238, 245);
+  height: 100px;
+}
+
+.hiit-card {
+  border: 3px solid #111314;
+  margin: 3em;
+  border-radius: 0.5rem;
+  color: rgb(227, 230, 232);
+  font-family: sans-serif, ;
+  /* Change from cursive to sans-serif */
+}
+
+/* HIIT Section */
+
+
+/* Workout section */
+.workouts-container {
+  margin-bottom: 20px;
+  /* Add some spacing between list items */
+
+  margin: 3em;
+  border-radius: 0.5rem;
+  color: rgb(213, 204, 204);
+}
+
+.card p {
+  color: #6c757d;
+  /* Change color to your desired color */
+
+}
+
+.card h2 {
+  color: #0c0d0e;
+  /* Change color to your desired color */
+}
+
+
+#start-button {
+  background-color: #4CAF50;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+
+/* WORKOUT */
+#workoutForm {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+#workoutForm h2 {
+  color: aliceblue;
+}
+
+#workoutForm input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #050504;
+}
+
+#workoutForm #addWorkoutBtn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#workoutForm #addWorkoutBtn:hover {
+  background-color: #45a049;
+}
+
+
+.workout-info {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.workout-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #700a0a;
+}
+
+.workout-duration {
+  font-size: 14px;
+  color: #666;
+}
+
+.workout-description {
+  font-size: 16px;
+  color: #444;
+  margin-top: 5px;
+}
+
+/* WORKOUT */
+
+#createdWork {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+#createdWork div {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#resetBtn2 {
+  padding: 10px 20px;
+  background-color: #4caf65;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#workoutList {
+  list-style: none;
+  padding: 0;
+}
+
+#workoutList li {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+
+
+#startStopBtn,
+#resetBtn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+#startStopBtn:hover,
+#resetBtn:hover {
+  background-color: #45a049;
+}
+
+#timer {
+  font-size: 48px;
+  /* Adjust the size of the timer */
+  color: #333;
+}
+
+#currentObject {
+  font-size: 25px;
+  /* Adjust the size of the current object display */
+  color: #9a1b1b;
+}
+#noWorkoutsMessage{
+  font-size: 15px;
+  /* Adjust the size of the current object display */
+  color: #9a1b1b;
+}
+ #currentObject2 {
+    font-size: 25px;
+    /* Adjust the size of the current object display */
+    color: #9a1b1b;
+  }
+
+#currentWorkoutDescription {
+  font-size: 25px;
+  /* Adjust the size of the current object display */
+  color: #9a1b1b
+}
+
+#currentDescription {
+  font-size: 20px;
+  /* Adjust the size of the current object display */
+  color: #a92424
+}
+
+/* Define the font size for the workout details */
+
+.workout-controls {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  /* Moved the margin-bottom to margin-top */
+}
+
+
+
+#workoutForm input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: rgb(11, 10, 10);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+.workout-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+
+
+/* Timer screen */
+main .screen article #clock {
+  background-color: grey;
+  height: 12em;
+  width: 12em;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main .screen .timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.screen {
+  width: 100%;
+  height: 100vh;
+}
+
+#startWorkoutBtn{
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#startBtn, #stopBtn {
+  font-size: xx-large; /* Adjust the icon size as needed */
+  margin: 0.5rem;
+}
+.timer {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  background-color: #f2f2f2;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+
+/* About Page */
+.about-card {
+  margin-bottom: 10px;
+  /* Add some spacing between list items */
+
+  margin: 3em;
+  border-radius: 0.5rem;
+  color: rgb(6, 10, 13);
+}
+
+.about-card h2 {
+  color: rgb(19, 21, 22);
+}
+
+
+#currentObject2,
+#currentWorkoutDescription {
+    font-weight: normal; /* Ensures the text is not bold */
+}
