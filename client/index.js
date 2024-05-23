@@ -225,6 +225,7 @@ async function displayHiits() {
   }
 }
 
+
 export async function displayClickedHiitWorkouts(clickedHiit) {
   const workouts = await getAllWorkouts();
   const filteredWorkouts = workouts.filter(

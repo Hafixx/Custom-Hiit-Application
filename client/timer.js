@@ -1,5 +1,5 @@
 import { getAllWorkouts } from './index.js';
-
+const sound = new Audio('./audios/timer.ogg');
 
 let workoutList = [];
 let timeLeft;
@@ -45,6 +45,7 @@ function startTimer() {
   startStopBtn.textContent = 'Stop';
   timerDisplay.textContent = timeLeft;
   timerInterval = setInterval(function () {
+    sound.play();
     timeLeft--;
     elapsedTime++; // Increment elapsed time
     timerDisplay.textContent = timeLeft;
@@ -57,6 +58,7 @@ function startTimer() {
 }
 
 function stopTimer() {
+  sound.pause();
   const startStopBtn = document.getElementById('startStopBtn');
   isRunning = false;
   startStopBtn.textContent = 'Start';
