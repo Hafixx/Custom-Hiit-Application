@@ -142,4 +142,4 @@ While developing Nutri-fit, I encountered a challenging issue: when the applicat
 
 - I utilised Ai to generate appropriate comments for my functions.
 
-
+ChatGPT OpenAI. (2024)
