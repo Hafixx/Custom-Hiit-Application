@@ -51,14 +51,14 @@ Overall, this UI provides an overview of the different HIIT workout types offere
 
 
 ## Usage
-Create Workout: Click the "Create Workout" button on the main interface.
-Fill Details: Enter exercise name, duration, and description in the form.
-Add Exercise: Click "Add Exercise" to include it in your routine.
-Manage Routine: Edit or delete exercises from the list view.
-Start Workout: Click "Start Workout" to see details, timer, and controls.
-Follow Instructions: Use start and pause buttons to control the timer and follow the routine.
-Repeat/Create: After finishing, repeat the routine or create a new one.
-Pre-designed HIIT: Access and follow pre-designed HIIT workouts from the designated section.
+1. **Create Workout**: Click the "Create Workout" button on the main interface.
+2. **Fill Details**: Enter exercise name, duration, and description in the form.
+3. **Add Exercise**: Click "Add Exercise" to include it in your routine.
+4. **Manage Routine**: Edit or delete exercises from the list view.
+5. **Start Workout**: Click "Start Workout" to see details, timer, and controls.
+6. **Follow Instructions**: Use start and pause buttons to control the timer and follow the routine.
+7. **Repeat/Create**: After finishing, repeat the routine or create a new one.
+8. **Pre-designed HIIT**: Access and follow pre-designed HIIT workouts from the designated section.
 
 ## Features
 
