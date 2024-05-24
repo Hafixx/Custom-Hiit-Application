@@ -33,7 +33,3 @@ export async function listHiits() {
   const db = await dbConn;
   return db.all('SELECT * FROM Hiits');
 }
-// export async function findHiits(name) {
-//   const db = await dbConn;
-//   return db.get('SELECT * FROM Hiits);
-// }

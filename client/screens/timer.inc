@@ -1,5 +1,5 @@
 
-  <div id="clock">Total Time: 00:00</div>
+<div id="clock"><h3 id="clock-timer">00:00</h3></div>
 <div id="validationMessage" style="display: none; color: red;">Please enter a valid workout name, duration, and description.</div>
 <h3>Current Workout: <span id="currentObject2"></span></h3>
 <h3>Description: <span id="currentWorkoutDescription"></span></h3>

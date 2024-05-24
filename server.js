@@ -5,6 +5,7 @@ import express from 'express';
 
 const app = express();
 
+
 app.use(express.static('client', { extensions: ['html'] }));
 
 async function getWorkouts(req, res) {

@@ -1,15 +1,20 @@
+// Module import
 import { getAllWorkouts } from './index.js';
-const sound = new Audio('./audios/timer.ogg');
 
+// Sound for timer alerts
+const sound = new Audio('./audios/timerSound.ogg');
+
+// Global variables
 let workoutList = [];
 let timeLeft;
 let timerInterval;
 let isRunning = false;
 let totalDuration;
 
+// Function to add event listeners
 function addEventListeners() {
+  // Start/Stop button event listener
   const startStopBtn = document.getElementById('startStopBtn');
-  const resetBtn = document.getElementById('resetBtn');
   startStopBtn.addEventListener('click', function () {
     if (!isRunning) {
       startTimer();
@@ -18,22 +23,22 @@ function addEventListeners() {
     }
   });
 
+  // Reset button event listener
+  const resetBtn = document.getElementById('resetBtn');
   resetBtn.addEventListener('click', function () {
     resetTimer();
   });
 }
 
+// Function to calculate total HIIT duration
 function calcHiitDuration(workouts) {
-  const res = workouts.reduce(
-    (sum, obj) => sum + obj.duration,
-    0,
-  );
-  return res;
+  return workouts.reduce((sum, obj) => sum + obj.duration, 0);
 }
 
+// Variable to track the elapsed time when the timer is stopped
+let elapsedTime = 0;
 
-let elapsedTime = 0; // Variable to track the elapsed time when the timer is stopped
-
+// Function to start the timer
 function startTimer() {
   const timerDisplay = document.getElementById('timer');
   const startStopBtn = document.getElementById('startStopBtn');
@@ -57,6 +62,7 @@ function startTimer() {
   }, 1000);
 }
 
+// Function to stop the timer
 function stopTimer() {
   sound.pause();
   const startStopBtn = document.getElementById('startStopBtn');
@@ -65,6 +71,7 @@ function stopTimer() {
   clearInterval(timerInterval);
 }
 
+// Function to reset the timer
 function resetTimer() {
   const timerDisplay = document.getElementById('timer');
   const currentObjectDisplay = document.getElementById('currentObject');
@@ -75,7 +82,7 @@ function resetTimer() {
   currentObjectDisplay.textContent = '';
 }
 
-
+// Function to update the current workout object displayed
 function updateCurrentObject() {
   const currentObjectDisplay = document.getElementById('currentObject');
   let cumulativeDuration = 0;
@@ -92,12 +99,11 @@ function updateCurrentObject() {
   currentObjectDisplay.textContent = currentObject;
 }
 
+// Function to fetch workouts for a clicked HIIT
 export async function getclickedWorkouts(clickedHiit) {
   const workouts = await getAllWorkouts();
 
-  const filteredWorkouts = workouts.filter(
-    (workout) => workout.hiits_id === clickedHiit,
-  );
+  const filteredWorkouts = workouts.filter((workout) => workout.hiits_id === clickedHiit);
 
   totalDuration = calcHiitDuration(filteredWorkouts);
   workoutList = filteredWorkouts.reverse(); // Reverse the array
@@ -114,7 +120,7 @@ export async function getclickedWorkouts(clickedHiit) {
   timerDisplay.textContent = timeLeft;
 }
 
-
+// Function to initialize event listeners
 export function start() {
   addEventListeners();
 }

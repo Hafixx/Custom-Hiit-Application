@@ -1,10 +1,18 @@
-
-
 ## Project Name
+
 Nutri-fit
 
 ## Description
 Nutri-fit is a user-friendly web application that allows fitness enthusiasts to create, customize, and manage their workout routines with ease. The app caters to individuals who prefer tailoring their exercise regimes to their specific needs while also providing access to a collection of pre-designed High-Intensity Interval Training (HIIT) workouts.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Design](#design)
+- [Ui](#ui)
+- [Usage](#usage)
+- [Features](#features)
+
 
 ## Installation
 
@@ -12,7 +20,7 @@ Before you start, ensure you have a good code editor like Visual Studio Code.
 
 1. Clone the repository:
     ```bash
-    <!-- git clone https://github.com/famedjoel/Lucky-Fitness.git -->
+    <!-- git clone https://github.com/Hafixx/Custom-Hiit-Application -->
     ```
 
 2. Install dependencies:
@@ -27,6 +35,20 @@ Before you start, ensure you have a good code editor like Visual Studio Code.
  Open any Selected web browser of your choice and visit [http://localhost:8080/](http://localhost:8080/) to view the app.
     ```
 
+
+### Design 
+
+ I had a clear vision that streamlined the process. Starting with sketches on Figma, I chose a portrait orientation for the exercise interface, departing from the typical small box format to offer a fresh experience. Recognizing the importance of warm-ups, I integrated a rest time feature to enhance user experience. Furthermore,Each person is unique, with distinct goals, preferences, and physical attributes. That's why we've developed a holistic approach that takes into account various factors such as body type, preferred exercise intensity, and time availability to devise customized workout plans that resonate with our users on a personal level. Nutri-fit empowers fitness enthusiasts to create, modify, and manage their workout routines effortlessly, catering to individuals who prefer tailoring their exercise regimens to their specific needs. Additionally, the application offers a range of pre-designed workouts to make it even more user-friendly. Users are also given the option to pause their workout if they wish to resume later.
+
+
+## Ui
+
+The UI has a clean and minimalistic design with a white background and black text. The navigation bar and workout description boxes have a green color scheme, which may be intentional to complement the fitness theme.
+Overall, this UI provides an overview of the different HIIT workout types offered by the website or application, allowing users to quickly understand the various options available and potentially navigate to specific workout pages or create their own customized workouts using the "Create" button.
+1. Navigation Bar: At the top, there are three navigation buttons labeled "Home," "Create," and "About." These buttons which serve as links to different sections of the web application.
+
+
+
 ## Usage
 To get started with Nutri-fit, follow these steps:
 
@@ -39,11 +61,8 @@ To get started with Nutri-fit, follow these steps:
 **Repeat or Create a New Routine**: After completing a workout, you can either repeat the same routine or navigate back to the workout creation page to design a new one.
 **Explore Pre-designed HIIT Workouts**: If you prefer structured, high-intensity workouts, you can access the pre-designed HIIT workouts section and select a routine to follow. The execution process for these workouts is similar to the custom-created routines.
 
-### Design 
 
-From the outset, I had a clear vision that made the process much smoother. Beginning with sketches on Figma, I opted for a portrait orientation for the exercise interface, diverging from the usual small box format to offer a unique experience. Understanding the importance of breaks, I incorporated a rest time feature to improve user experience. Additionally, I felt it was essential for Nutri-fit, a user-friendly web application, to include a weight input feature, as consistent exercise often results in weight loss. This feature serves as a motivational tool, highlighting the tangible progress of the user's fitness journey. Nutri-fit was designed with the belief that fitness is not a one-size-fits-all endeavor. Each individual is unique, with distinct goals, preferences, and physical attributes. That's why we've developed a comprehensive approach that considers various factors such as fitness level, body type, dietary preferences, and time constraints to create tailored workout plans that resonate with our users on a personal level. Nutri-fit allows fitness enthusiasts to create, customize, and manage their workout routines with ease, catering to individuals who prefer tailoring their exercise regimes to their specific needs while also providing access to a collection of pre-designed High-Intensity Interval Training (HIIT) workouts.
-
-## Key features
+## Features
 
 ### Custom Workout Creation
 
@@ -108,4 +127,6 @@ The suggestion involved using JavaScript's built-in `setInterval` and `clearInte
 
 The response provided guidance on adding event listeners to button elements and toggling the timer functionality based on the user's interaction with the start and pause buttons. It recommended using separate functions or methods to handle the start, pause, and resume actions, and updating the timer display accordingly.
 
-**Audio Cues feature**
+### Audio Cues
+- I implemented audio cue using a sound I created with my voice on audacity. This can help significantly enhance the user experience of SeeFit by providing pace and cadence for exercises that involve rhythmic movements such as jumping jacks or mountain jacks to keep users engaged through out the activity. With this being implemented, the users do not constantly have to stare at their device to check for time as they know the exercise time has elapsed when the audio cue sound stops. This aligns with the Nielsen's 1st usability Heuristic which suggests "visibility of system status" as the system always keeps users informed about what's going on in the app.
+

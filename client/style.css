@@ -325,8 +325,12 @@ main .screen article #clock {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: x-large;
 }
 
+#clock{
+  font-size:20em;
+}
 main .screen .timer {
   display: flex;
   flex-direction: column;

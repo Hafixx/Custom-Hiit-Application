@@ -1,14 +1,27 @@
-const sound = new Audio('./audios/timer.ogg');
+// Define the sound for timer alerts
+const sound = new Audio('./audios/timerSound.ogg');
 
-
+// Object to hold references to UI elements
 const el = {};
+
+// Array to store selected workout options
 let selectedOptions = [];
+
+// Interval ID for the timer
 let timerInterval;
-let elapsedTime = 0; // Define elapsedTime here
+
+// Variable to track elapsed time
+let elapsedTime = 0;
+
+// Total time for the timer (constant)
 const totalTimeSeconds = 0;
+
+// Current timer value
 let currentTimer = 0;
 
+// Function to prepare handles to UI elements
 function prepareHandles() {
+  // Assigning UI elements to variables
   el.newWorkout = document.querySelector('#newWorkout');
   el.startBtn = document.querySelector('#startBtn');
   el.stopBtn = document.querySelector('#stopBtn');
@@ -22,24 +35,31 @@ function prepareHandles() {
   el.timer = document.querySelector('#clock');
 }
 
+// import { showScreen } from './index.js';
+// Function to add event listeners to UI elements
 function addEventListeners() {
+  // Event listener for adding a custom workout
   el.addWorkoutBtn.addEventListener('click', (event) => {
     event.preventDefault(); // Prevent default form submission
     addCustomWorkout();
     saveToLocalStorage();
   });
 
+  // Event listener for starting the timer
   el.startBtn.addEventListener('click', () => {
+    // showScreen('timer');
     startTimer();
     saveToLocalStorage();
   });
 
+  // Event listener for stopping the timer
   el.stopBtn.addEventListener('click', function (event) {
     event.preventDefault(); // Prevent the default form submission behavior
     stopTimer();
     saveToLocalStorage();
   });
 
+  // Event listener for resetting the timer
   el.resetBtn.addEventListener('click', function (event) {
     event.preventDefault(); // Prevent the default form submission behavior
     resetCreateTimer();
@@ -47,12 +67,15 @@ function addEventListeners() {
   });
 }
 
+// Function to add a custom workout to the selected options
 function addCustomWorkout() {
+  // Retrieve input values
   const name = el.workoutName.value.trim();
   const duration = parseInt(el.workoutDuration.value);
   const description = el.workoutDescription.value.trim();
   const validationMessage = document.getElementById('validationMessage');
 
+  // Validate input values
   if (name === '' || isNaN(duration) || duration <= 0) {
     validationMessage.style.display = 'block';
     return;
@@ -60,14 +83,16 @@ function addCustomWorkout() {
     validationMessage.style.display = 'none';
   }
 
+  // Add the workout to selected options
   selectedOptions.push({ name, duration, description });
 
+  // Calculate total time and update timer display
   const totalTimeSeconds = selectedOptions.reduce((total, workout) => total + workout.duration, 0);
   updateTimerDisplay(totalTimeSeconds);
 
+  // Create and append list item for the workout
   const workoutList = document.querySelector('#workoutList');
   const li = document.createElement('li');
-
   // Creating spans for each detail
   const nameSpan = document.createElement('span');
   nameSpan.classList.add('workout-name');
@@ -80,6 +105,7 @@ function addCustomWorkout() {
   const descriptionSpan = document.createElement('span');
   descriptionSpan.classList.add('workout-description');
   descriptionSpan.textContent = description;
+
   const deleteBtn = document.createElement('button');
   deleteBtn.classList.add('delete-btn', 'btn', 'btn-danger');
   const deleteIcon = document.createElement('i');
@@ -106,15 +132,17 @@ function addCustomWorkout() {
   li.appendChild(document.createTextNode(' '));
   li.appendChild(editBtn);
 
-
   workoutList.appendChild(li);
 
+  // Clear input fields
   el.workoutName.value = '';
   el.workoutDuration.value = '';
   el.workoutDescription.value = '';
 }
 
+// Function to start the timer
 function startTimer() {
+  // Calculate total duration of all selected workouts
   const totalDuration = selectedOptions.reduce((total, workout) => workout && workout.duration ? total + workout.duration : total, 0);
   currentTimer = Math.max(totalDuration - elapsedTime, 0);
   el.startBtn.disabled = true;
@@ -134,6 +162,7 @@ function startTimer() {
     }
   }
 
+  // Start the timer interval
   timerInterval = setInterval(() => {
     sound.play();
 
@@ -165,17 +194,22 @@ function startTimer() {
       clearInterval(timerInterval);
       document.getElementById('currentObject2').textContent = ''; // Clear current workout display
       document.getElementById('currentWorkoutDescription').textContent = ''; // Clear current workout description
+      el.startBtn.disabled = false;
+
+      // Enable the startBtn
+      elapsedTime = 0; // Reset elapsedTime
     }
   }, 1000);
 }
 
+// Function to stop the timer
 function stopTimer() {
   sound.pause();
-
   clearInterval(timerInterval);
   el.startBtn.disabled = false;
 }
 
+// Function to delete a workout from the list
 function deleteWorkout(li) {
   const workoutList = li.parentNode;
   const index = Array.from(workoutList.children).indexOf(li);
@@ -189,6 +223,7 @@ function deleteWorkout(li) {
   updateTimerDisplay(totalTimeSeconds);
 }
 
+// Function to edit a workout in the list
 function editWorkout(li, currentName, currentDuration, currentDescription) {
   // Remove any existing "Confirm" button
   const existingConfirmBtn = el.addWorkoutBtn.parentNode.querySelector('.confirmBtn');
@@ -233,13 +268,15 @@ function editWorkout(li, currentName, currentDuration, currentDescription) {
   el.addWorkoutBtn.parentNode.insertBefore(confirmBtn, el.addWorkoutBtn.nextSibling);
 }
 
+// Function to update the timer display
 function updateTimerDisplay(seconds) {
   const minutes = Math.floor(seconds / 60);
   const remainingSeconds = seconds % 60;
   const display = `${minutes < 10 ? '0' : ''}${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
-  el.timer.textContent = `Total Time: ${display}`;
+  el.timer.textContent = ` ${display}`;
 }
 
+// Function to reset the timer and workout list
 function resetCreateTimer() {
   clearInterval(timerInterval);
   currentTimer = totalTimeSeconds;
@@ -254,10 +291,12 @@ function resetCreateTimer() {
   document.getElementById('currentObject2').textContent = '';
 }
 
+// Function to save selected options to local storage
 function saveToLocalStorage() {
   localStorage.setItem('selectedOptions', JSON.stringify(selectedOptions));
 }
 
+// Function to load selected options from local storage
 function loadFromLocalStorage() {
   const storedOptions = localStorage.getItem('selectedOptions');
   if (storedOptions) {
@@ -311,6 +350,7 @@ function loadFromLocalStorage() {
   }
 }
 
+// Initialization function
 export function createInit() {
   prepareHandles();
   loadFromLocalStorage();
