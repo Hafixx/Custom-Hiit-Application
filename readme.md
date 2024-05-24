@@ -135,12 +135,11 @@ Nutri-fit efficiently integrates a database and local storage for seamless data 
 Database: Handles user authentication, profiles, and workout routines.
 Local Storage: Stores session data and enables offline access to cached content.
 
-## AI
-
-- I utilised Ai to generate appropriate comments for my functions.
-
 
  ## Challenges
 While developing Nutri-fit, I encountered a challenging issue: when the application is initially loaded, it does not allow users to start a workout right away. However, it functions correctly after the initial attempt. I believe this issue is related to the routing of the application. I am actively working to resolve this minor issue to ensure a smoother user experience.
+## AI
+
+- I utilised Ai to generate appropriate comments for my functions.
 
 
