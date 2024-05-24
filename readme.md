@@ -51,17 +51,14 @@ Overall, this UI provides an overview of the different HIIT workout types offere
 
 
 ## Usage
-To get started with Nutri-fit, follow these steps:
-
-1.Navigate to the Workout Creation Page: Upon visiting the Nutri-fit web application, you'll be directed to the main application interface. Locate and click on the "Create Workout" button or link to access the workout creation page.
-2.Fill in the Workout Details: On the workout creation page, you'll find a form with fields for entering the exercise name, duration, and description. Provide the necessary information for your desired exercise, ensuring that all required fields are filled out correctly.
-3.Add the Exercise to Your Routine: Once you've entered the exercise details, click the "Add Exercise" or "Submit" button to add the exercise to your workout routine. The exercise will be displayed in the list view below the form.
-4.Manage Your Workout Routine: From the list view, you can edit or delete any exercise in your routine by clicking on the corresponding "Edit" or "Delete" buttons or icons.
-5.Start Your Workout: When you're ready to begin your workout, click on the "Start Workout" button or link. This will take you to the workout execution screen, where you'll see the exercise details, timer, and start/pause controls.
-6.Follow the Workout Instructions: The workout execution screen will guide you through your routine, displaying the current exercise name, description, and duration. Use the start and pause buttons to control the timer as you progress through each exercise.
-7.Repeat or Create a New Routine: After completing a workout, you can either repeat the same routine or navigate back to the workout creation page to design a new one.
-8.Explore Pre-designed HIIT Workouts: If you prefer structured, high-intensity workouts, you can access the pre-designed HIIT workouts section and select a routine to follow. The execution process for these workouts is similar to the custom-created routines.
-
+Create Workout: Click the "Create Workout" button on the main interface.
+Fill Details: Enter exercise name, duration, and description in the form.
+Add Exercise: Click "Add Exercise" to include it in your routine.
+Manage Routine: Edit or delete exercises from the list view.
+Start Workout: Click "Start Workout" to see details, timer, and controls.
+Follow Instructions: Use start and pause buttons to control the timer and follow the routine.
+Repeat/Create: After finishing, repeat the routine or create a new one.
+Pre-designed HIIT: Access and follow pre-designed HIIT workouts from the designated section.
 
 ## Features
 
