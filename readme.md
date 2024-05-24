@@ -12,6 +12,7 @@ Nutri-fit is a user-friendly web application that allows fitness enthusiasts to 
 - [Ui](#ui)
 - [Usage](#usage)
 - [Features](#features)
+- [AI](#Ai)
 
 
 ## Installation
@@ -52,14 +53,14 @@ Overall, this UI provides an overview of the different HIIT workout types offere
 ## Usage
 To get started with Nutri-fit, follow these steps:
 
-**Navigate to the Workout Creation Page**: Upon visiting the Nutri-fit web application, you'll be directed to the main application interface. Locate and click on the "Create Workout" button or link to access the workout creation page.
-**Fill in the Workout Details**: On the workout creation page, you'll find a form with fields for entering the exercise name, duration, and description. Provide the necessary information for your desired exercise, ensuring that all required fields are filled out correctly.
-**Add the Exercise to Your Routine**: Once you've entered the exercise details, click the "Add Exercise" or "Submit" button to add the exercise to your workout routine. The exercise will be displayed in the list view below the form.
-**Manage Your Workout Routine**: From the list view, you can edit or delete any exercise in your routine by clicking on the corresponding "Edit" or "Delete" buttons or icons.
-**Start Your Workout**: When you're ready to begin your workout, click on the "Start Workout" button or link. This will take you to the workout execution screen, where you'll see the exercise details, timer, and start/pause controls.
-**Follow the Workout Instructions**: The workout execution screen will guide you through your routine, displaying the current exercise name, description, and duration. Use the start and pause buttons to control the timer as you progress through each exercise.
-**Repeat or Create a New Routine**: After completing a workout, you can either repeat the same routine or navigate back to the workout creation page to design a new one.
-**Explore Pre-designed HIIT Workouts**: If you prefer structured, high-intensity workouts, you can access the pre-designed HIIT workouts section and select a routine to follow. The execution process for these workouts is similar to the custom-created routines.
+1.Navigate to the Workout Creation Page: Upon visiting the Nutri-fit web application, you'll be directed to the main application interface. Locate and click on the "Create Workout" button or link to access the workout creation page.
+2.Fill in the Workout Details: On the workout creation page, you'll find a form with fields for entering the exercise name, duration, and description. Provide the necessary information for your desired exercise, ensuring that all required fields are filled out correctly.
+3.Add the Exercise to Your Routine: Once you've entered the exercise details, click the "Add Exercise" or "Submit" button to add the exercise to your workout routine. The exercise will be displayed in the list view below the form.
+4.Manage Your Workout Routine: From the list view, you can edit or delete any exercise in your routine by clicking on the corresponding "Edit" or "Delete" buttons or icons.
+5.Start Your Workout: When you're ready to begin your workout, click on the "Start Workout" button or link. This will take you to the workout execution screen, where you'll see the exercise details, timer, and start/pause controls.
+6.Follow the Workout Instructions: The workout execution screen will guide you through your routine, displaying the current exercise name, description, and duration. Use the start and pause buttons to control the timer as you progress through each exercise.
+7.Repeat or Create a New Routine: After completing a workout, you can either repeat the same routine or navigate back to the workout creation page to design a new one.
+8.Explore Pre-designed HIIT Workouts: If you prefer structured, high-intensity workouts, you can access the pre-designed HIIT workouts section and select a routine to follow. The execution process for these workouts is similar to the custom-created routines.
 
 
 ## Features
@@ -129,4 +130,14 @@ The response provided guidance on adding event listeners to button elements and 
 
 ### Audio Cues
 - I implemented audio cue using a sound I created with my voice on audacity. This can help significantly enhance the user experience of SeeFit by providing pace and cadence for exercises that involve rhythmic movements such as jumping jacks or mountain jacks to keep users engaged through out the activity. With this being implemented, the users do not constantly have to stare at their device to check for time as they know the exercise time has elapsed when the audio cue sound stops. This aligns with the Nielsen's 1st usability Heuristic which suggests "visibility of system status" as the system always keeps users informed about what's going on in the app.
+  
+## Data Integration
+Nutri-fit efficiently integrates a database and local storage for seamless data management:
+
+Database: Handles user authentication, profiles, and workout routines.
+Local Storage: Stores session data and enables offline access to cached content.
+
+## AI
+
+- I utilised Ai to generate appropriate comments for my functions.
 
