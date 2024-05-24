@@ -21,7 +21,7 @@ Before you start, ensure you have a good code editor like Visual Studio Code.
 
 1. Clone the repository:
     ```bash
-    <!-- git clone https://github.com/Hafixx/Custom-Hiit-Application -->
+     git clone https://github.com/Hafixx/Custom-Hiit-Application
     ```
 
 2. Install dependencies:
